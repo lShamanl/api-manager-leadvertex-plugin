@@ -2,6 +2,11 @@
 Информация о том, как пользоваться библиотекой ApiManager:
 https://github.com/lShamanl/api-manager
 
+# Установка
+```
+composer require lshamanl/api-manager-leadvertex-plugin
+```
+
 ## Примеры пользования плагином:
 
 ### Добавление заказа от лица администратора
