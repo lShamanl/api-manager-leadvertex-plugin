@@ -10,7 +10,7 @@
     ],
     "version":"1.0.0",
     "minimum-stability": "dev",
-    "description": "Разработка для удобного обращения с API различных сервисов. Работает на версии php 5.5+",
+    "description": "Плагин для удобной работы с API Leadvertex",
     "require": {
         "ext-curl": "*",
         "lshamanl/api-manager": "1.0.0"
