@@ -9,7 +9,6 @@
         }
     ],
     "version":"1.0.0",
-    "minimum-stability": "dev",
     "description": "Плагин для удобной работы с API Leadvertex",
     "require": {
         "ext-curl": "*",
