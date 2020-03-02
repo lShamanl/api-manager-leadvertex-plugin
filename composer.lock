@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "76a28b449f76136f884fb8c9399e62c4",
+    "content-hash": "7a3e539d4ff83b0bd202b15ae1e9d62c",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -197,16 +197,16 @@
         },
         {
             "name": "lshamanl/api-manager",
-            "version": "1.0.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lShamanl/api-manager.git",
-                "reference": "5cb5f0b1ea492737f34c17220422f6f8d3ada72c"
+                "reference": "b7a53e5957bb08519212f11ff507756bc3212183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lShamanl/api-manager/zipball/5cb5f0b1ea492737f34c17220422f6f8d3ada72c",
-                "reference": "5cb5f0b1ea492737f34c17220422f6f8d3ada72c",
+                "url": "https://api.github.com/repos/lShamanl/api-manager/zipball/b7a53e5957bb08519212f11ff507756bc3212183",
+                "reference": "b7a53e5957bb08519212f11ff507756bc3212183",
                 "shasum": ""
             },
             "require": {
@@ -231,7 +231,7 @@
                 }
             ],
             "description": "Разработка для удобного обращения с API различных сервисов. Работает на версии php 5.5+",
-            "time": "2020-02-17T09:23:21+00:00"
+            "time": "2020-03-02T09:06:09+00:00"
         },
         {
             "name": "psr/http-message",
