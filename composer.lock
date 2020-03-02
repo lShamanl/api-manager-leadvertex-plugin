@@ -196,23 +196,60 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
-            "name": "lshamanl/api-manager",
-            "version": "1.3.0",
+            "name": "lshamanl/api-answer",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/lShamanl/api-manager.git",
-                "reference": "b7a53e5957bb08519212f11ff507756bc3212183"
+                "url": "https://github.com/lShamanl/api-answer.git",
+                "reference": "37292b609fd7a272c40dde2775641efeaff6df74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lShamanl/api-manager/zipball/b7a53e5957bb08519212f11ff507756bc3212183",
-                "reference": "b7a53e5957bb08519212f11ff507756bc3212183",
+                "url": "https://api.github.com/repos/lShamanl/api-answer/zipball/37292b609fd7a272c40dde2775641efeaff6df74",
+                "reference": "37292b609fd7a272c40dde2775641efeaff6df74",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiAnswer\\Application\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "lShamanl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Универсальный формат для создания ответов от API",
+            "time": "2020-03-02T09:48:24+00:00"
+        },
+        {
+            "name": "lshamanl/api-manager",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lShamanl/api-manager.git",
+                "reference": "7c7d091b67782d25ebdcf823cef8789fd4566bc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lShamanl/api-manager/zipball/7c7d091b67782d25ebdcf823cef8789fd4566bc4",
+                "reference": "7c7d091b67782d25ebdcf823cef8789fd4566bc4",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
-                "guzzlehttp/guzzle": "~6.0"
+                "guzzlehttp/guzzle": "~6.0",
+                "lshamanl/api-answer": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -231,7 +268,7 @@
                 }
             ],
             "description": "Разработка для удобного обращения с API различных сервисов. Работает на версии php 5.5+",
-            "time": "2020-03-02T09:06:09+00:00"
+            "time": "2020-03-02T10:05:06+00:00"
         },
         {
             "name": "psr/http-message",
