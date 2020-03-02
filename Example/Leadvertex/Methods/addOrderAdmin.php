@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/api-manager/src/bootstrap.php';
+require_once __DIR__ . '/api-manager-leadvertex-plugin/src/bootstrap.php';
 
 use ApiManager\Application\Classes\DataGuard;
-use ApiManager\Application\Services\ApiService\Components\ApiAnswer;
+use ApiAnswer\Application\ApiAnswer;
 use ApiManager\Plugins\Leadvertex\AdminApi;
 use ApiManager\Application\Classes\DataHelper;
 use ApiManager\Plugins\Leadvertex\Entity\Good;

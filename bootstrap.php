@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 
-use ApiManager\Application\Services\ApiService\Components\ApiAnswer;
+use ApiAnswer\Application\ApiAnswer;
 
 try {
     header('Content-Type: text/html; charset=utf-8');
