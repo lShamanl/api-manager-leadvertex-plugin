@@ -16,35 +16,168 @@ use Exception;
  */
 class AdminApi extends PluginApi
 {
-    const ADD_ORDER = 'addOrder'; // Импорт заказов
-    const UPDATE_ORDER = 'updateOrder'; // Редактирование заказа
-    const ADD_GOOD = "addGood"; // Добавление товара
-    const ACTIVATE_GOOD_IN_OFFER = "activateGoodInOffer"; // Включить товар в проекте
-    const UPDATE_GOOD = "updateGood"; // Редактирование товара
-    const INCREASE_GOOD_RESERVE = "increaseGoodReserve"; // Управление остатками - увеличить количество
-    const REDUCE_GOOD_RESERVE = "reduceGoodReserve"; // Управление остатками - уменьшить количество
+    /**
+     * Импорт заказов
+     * https://demo-1.leadvertex.ru/admin/page/api.html#importOrder
+     */
+    const ADD_ORDER = 'addOrder';
 
-    const GET_STATUS_LIST = "getStatusList"; // Получение списка статусов
-    const GET_ORDERS_ID_IN_STATUS = "getOrdersIdsInStatus"; // Получение ID всех заказов в статусе
-    const GET_ORDERS_IDS_BY_CONDITION ="getOrdersIdsByCondition"; // Поиск заказов по параметрам
-    const GET_OFFER_GOODS = "getOfferGoods"; // Получение данных товаров
-    const GET_GOOD_CATEGORIES = "getGoodCategories"; // Получение данных о категориях товаров
-    const GET_ORDERS_BY_IDS = "getOrdersByIds"; // Получение данных заказа
-    const GET_ORDERS_BY_RUSSIAN_POST_TRACKS = "getOrdersByRussianPostTracks"; // Получение данных заказа по трек-номеру Почты России
-    const CHECK_USED_BY_ORDER = "checkUsedByOrder"; // Проверка редактируется ли заказ
-    const GET_ORDER_HISTORY = "getOrderHistory"; // Получение истории заказа
-    const GET_ORDER_HISTORY_BY_TIME_SAVE = "getOrderHistoryByTimeSave"; // Получение истории заказа за определенный период времени
-    const GET_OPERATOR_ACTIONS = "getOperatorActions"; // Получение истории действий оператора
-    const GET_OPERATORS = "getOperators"; // Получение информации по операторах
-    const GET_ACTIVE_ACTIONS = "getActiveOperators"; // Получение информации по активным операторах
-    const GET_ONLINE_OPERATORS = "getOnlineOperators"; // Получение списка операторов онлайн
-    const GET_WEBMASTERS = "getWebmasters"; // Получение информации по веб-мастерам
-    const GET_WEBMASTER_PAYMENTS = "getWebmasterPayments"; // Получение данных по ставкам веб-мастера
-    const GET_WEBMASTER_ORDERED_PAYMENTS ="getWebmasterOrderedPayments"; // Получение данных по заказанным выплатам веб-мастера
-    const GET_POST_OFFICE_DATA ="getPostOfficeData"; // Получение данных по заказанным выплатам веб-мастера
+    /**
+     * Редактирование заказа
+     * https://demo-1.leadvertex.ru/admin/page/api.html#updateOrder
+     */
+    const UPDATE_ORDER = 'updateOrder';
 
-    const FIELDS_GET_RULES ="fields/getRules"; // Получить настройки полей формы
-    const FIELDS_UPDATE_RULES ="fields/updateRules"; // Редактировать настройки полей формы
+    /**
+     * Добавление товара
+     * https://demo-1.leadvertex.ru/admin/page/api.html#addGood
+     */
+    const ADD_GOOD = "addGood";
+
+    /**
+     * Включить товар в проекте
+     * https://demo-1.leadvertex.ru/admin/page/api.html#activateGoodInOffer
+     */
+    const ACTIVATE_GOOD_IN_OFFER = "activateGoodInOffer";
+
+    /**
+     * Редактирование товара
+     * https://demo-1.leadvertex.ru/admin/page/api.html#updateGood
+     */
+    const UPDATE_GOOD = "updateGood";
+
+    /**
+     * Управление остатками - увеличить количество
+     * https://demo-1.leadvertex.ru/admin/page/api.html#increaseGoodReserve
+     */
+    const INCREASE_GOOD_RESERVE = "increaseGoodReserve";
+
+    /**
+     * Управление остатками  - уменьшить количество
+     * https://demo-1.leadvertex.ru/admin/page/api.html#reduceGoodReserve
+     */
+    const REDUCE_GOOD_RESERVE = "reduceGoodReserve";
+
+    /**
+     * Получение списка статусов
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getStatusList
+     */
+    const GET_STATUS_LIST = "getStatusList";
+
+    /**
+     * Получение ID  всех заказов в статусе
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrdersIdsInStatus
+     */
+    const GET_ORDERS_ID_IN_STATUS = "getOrdersIdsInStatus";
+
+    /**
+     * Поиск заказов по параметрам
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrdersIdsByCondition
+     */
+    const GET_ORDERS_IDS_BY_CONDITION ="getOrdersIdsByCondition";
+
+    /**
+     * Получение данных товаров
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOfferGoods
+     */
+    const GET_OFFER_GOODS = "getOfferGoods";
+
+    /**
+     * Получение данных  о категориях товаров
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getGoodCategories
+     */
+    const GET_GOOD_CATEGORIES = "getGoodCategories";
+
+    /**
+     * Получение данных  заказа
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrdersByIds
+     */
+    const GET_ORDERS_BY_IDS = "getOrdersByIds";
+
+    /**
+     * Получение данных  заказа по трек-номеру Почты России
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrdersByRussianPostTracks
+     */
+    const GET_ORDERS_BY_RUSSIAN_POST_TRACKS = "getOrdersByRussianPostTracks";
+
+    /**
+     * Проверка редактируется  ли заказ
+     * https://demo-1.leadvertex.ru/admin/page/api.html#checkUsedByOrder
+     */
+    const CHECK_USED_BY_ORDER = "checkUsedByOrder";
+
+    /**
+     * Получение истории  заказа
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrderHistory
+     */
+    const GET_ORDER_HISTORY = "getOrderHistory";
+
+    /**
+     * Получение истории  заказа за определенный период времени
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrderHistoryByTimeSave
+     */
+    const GET_ORDER_HISTORY_BY_TIME_SAVE = "getOrderHistoryByTimeSave";
+
+    /**
+     * Получение истории  действий оператора
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOperatorActions
+     */
+    const GET_OPERATOR_ACTIONS = "getOperatorActions";
+
+    /**
+     * Получение информации  по операторах
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOperators
+     */
+    const GET_OPERATORS = "getOperators";
+
+    /**
+     * Получение информации  по активным операторах
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getActiveOperators
+     */
+    const GET_ACTIVE_ACTIONS = "getActiveOperators";
+
+    /**
+     * Получение списка  операторов онлайн
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOnlineOperators
+     */
+    const GET_ONLINE_OPERATORS = "getOnlineOperators";
+
+    /**
+     * Получение информации  по веб-мастерам
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getWebmasters
+     */
+    const GET_WEBMASTERS = "getWebmasters";
+
+    /**
+     * Получение данных  по ставкам веб-мастера
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getWebmasterPayments
+     */
+    const GET_WEBMASTER_PAYMENTS = "getWebmasterPayments";
+
+    /**
+     * Получение данных  по заказанным выплатам веб-мастера
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getWebmasterOrderedPayments
+     */
+    const GET_WEBMASTER_ORDERED_PAYMENTS ="getWebmasterOrderedPayments";
+
+    /**
+     * Получение данных  по заказанным выплатам веб-мастера
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getPostOfficeData
+     */
+    const GET_POST_OFFICE_DATA ="getPostOfficeData";
+
+    /**
+     * Получить настройки полей формы
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getFieldsRules
+     */
+    const FIELDS_GET_RULES ="fields/getRules";
+
+    /**
+     * Редактировать настройки полей формы
+     * https://demo-1.leadvertex.ru/admin/page/api.html#updateFieldsRules
+     */
+    const FIELDS_UPDATE_RULES ="fields/updateRules";
+
 
     /** @var string */
     protected $method;

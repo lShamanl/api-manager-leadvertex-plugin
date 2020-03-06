@@ -16,13 +16,47 @@ use ApiManager\Application\PluginApi;
 class StatusApi extends PluginApi
 {
 
-    const ADD = "add"; // Добавление нового статуса
-    const DELETE = "delete"; // Удалить статус
-    const CONTAINER_GET_ALL = "container/getAll"; // Список контейнеров
-    const CHANGE_NAME = "change/name"; // Сменить название статуса
-    const CHANGE_GROUP = "change/group"; // Сменить группу статуса
-    const CHANGE_POSITION = "change/position"; // Сменить позицию статуса
-    const CHANGE_GOODS_QUANTITY = "change/goodsQuantity"; // Сменить действия со складом для статуса
+    /**
+     * Добавление нового статуса
+     * https://demo-1.leadvertex.ru/admin/page/api.html#addStatus
+     */
+    const ADD = "add";
+
+    /**
+     * Удалить статус
+     * https://demo-1.leadvertex.ru/admin/page/api.html#deleteStatus
+     */
+    const DELETE = "delete";
+
+    /**
+     * Список контейнеров
+     * https://demo-1.leadvertex.ru/admin/page/api.html#containerList
+     */
+    const CONTAINER_GET_ALL = "container/getAll";
+
+    /**
+     * Сменить название статуса
+     * https://demo-1.leadvertex.ru/admin/page/api.html#changeName
+     */
+    const CHANGE_NAME = "change/name";
+
+    /**
+     * Сменить группу статуса
+     * https://demo-1.leadvertex.ru/admin/page/api.html#changeGroup
+     */
+    const CHANGE_GROUP = "change/group";
+
+    /**
+     * Сменить позицию статуса
+     * https://demo-1.leadvertex.ru/admin/page/api.html#changePosition
+     */
+    const CHANGE_POSITION = "change/position";
+
+    /**
+     * Сменить действия со складом для статуса
+     * https://demo-1.leadvertex.ru/admin/page/api.html#changeGoodsQuantity
+     */
+    const CHANGE_GOODS_QUANTITY = "change/goodsQuantity";
 
     /** @var string */
     protected $method;

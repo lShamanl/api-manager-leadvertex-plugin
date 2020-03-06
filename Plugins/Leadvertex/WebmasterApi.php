@@ -16,10 +16,29 @@ use ApiManager\Application\PluginApi;
 class WebmasterApi extends PluginApi
 {
 
-    const ADD_ORDER = "addOrder"; // Импорт заказов
-    const GET_ORDERS_BY_IDS = "getOrdersByIds"; // Получение списка заказов
-    const GET_BALANCE = "getBalance"; // Получение баланса
-    const GET_PROCESSED_PAYMENTS = "getProcessedPayments"; // Получение новых заявок на выплату
+    /**
+     * Импорт заказов
+     * https://demo-1.leadvertex.ru/webmaster/api#addOrder
+     */
+    const ADD_ORDER = "addOrder";
+
+    /**
+     * Получение списка заказов
+     * https://demo-1.leadvertex.ru/webmaster/api#getOrdersByIds
+     */
+    const GET_ORDERS_BY_IDS = "getOrdersByIds";
+
+    /**
+     * Получение баланса
+     * https://demo-1.leadvertex.ru/webmaster/api#getBalance
+     */
+    const GET_BALANCE = "getBalance";
+
+    /**
+     * Получение новых заявок на выплату
+     * https://demo-1.leadvertex.ru/webmaster/api#getProcessedPayments
+     */
+    const GET_PROCESSED_PAYMENTS = "getProcessedPayments";
 
     /** @var string */
     protected $method;

@@ -16,14 +16,53 @@ use ApiManager\Application\PluginApi;
 class StatisticApi extends PluginApi
 {
 
-    const CONVERSION = "conversion"; // Статистика по конверсиям
-    const OPERATORS = "operators"; // Статистика по операторам
-    const GET_ORDER_IDS_FOR_OPERATOR_STATISTIC = "getOrderIdsForOperatorStatistic"; // Запросить id заказов для статистики по операторам
-    const BUYOUT = "buyout"; // Статистика по выкупаемости
-    const GET_ORDER_IDS_FOR_BUYOUT_STATISTIC = "getOrderIdsForBuyoutStatistic"; // Запросить id заказов для статистики по выкупаемости
-    const ROBO_CALLS = "roboCalls"; // Статистика по робо прозвону
-    const WEBMASTERS = "webmasters"; // Статистика по веб-мастерам
-    const EXTERNAL_WEBMASTERS = "externalWebmasters"; // Статистика по внешним веб-мастерам
+    /**
+     * Статистика по конверсиям
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getConversionStatistic
+     */
+    const CONVERSION = "conversion";
+
+    /**
+     * Статистика по операторам
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOperatorStatistic
+     */
+    const OPERATORS = "operators";
+
+    /**
+     * Запросить id заказов для статистики по операторам
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOperatorStatisticIds
+     */
+    const GET_ORDER_IDS_FOR_OPERATOR_STATISTIC = "getOrderIdsForOperatorStatistic";
+
+    /**
+     * Статистика по выкупаемости
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getBuyoutStatistic
+     */
+    const BUYOUT = "buyout";
+
+    /**
+     * Запросить id заказов для статистики по выкупаемости
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getOrderIdsForBuyoutStat
+     */
+    const GET_ORDER_IDS_FOR_BUYOUT_STATISTIC = "getOrderIdsForBuyoutStatistic";
+
+    /**
+     * Статистика по робо прозвону
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getRoboCallsStatistic
+     */
+    const ROBO_CALLS = "roboCalls";
+
+    /**
+     * Статистика по веб-мастерам
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getWebmasterStatistic
+     */
+    const WEBMASTERS = "webmasters";
+
+    /**
+     * Статистика по внешним веб-мастерам
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getExternalWebmasterStatistic
+     */
+    const EXTERNAL_WEBMASTERS = "externalWebmasters";
 
     /** @var string */
     protected $method;

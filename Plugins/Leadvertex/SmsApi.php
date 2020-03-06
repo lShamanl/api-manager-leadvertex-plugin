@@ -16,13 +16,47 @@ use ApiManager\Application\PluginApi;
 class SmsApi extends PluginApi
 {
 
-    const TEMPLATES = "templates"; // Получение списка шаблонов SMS
-    const PROVIDERS = "providers"; // Получение списка провайдеров SMS
-    const SEND_TEMPLATE = "sendTemplate"; // Отправка SMS по шаблону
-    const SEND_TEXT = "sendText"; // Отправка произвольного текста
-    const STATUS = "status"; // Просмотр статуса отправленных SMS
-    const CREATE_TEMPLATE = "createTemplate"; // Создание шаблона SMS
-    const DELETE_TEMPLATE = "deleteTemplate"; // Удалить шаблон SMS
+    /**
+     * Получение списка шаблонов SMS
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getTemplates
+     */
+    const TEMPLATES = "templates";
+
+    /**
+     * Получение списка провайдеров SMS
+     * https://demo-1.leadvertex.ru/admin/page/api.html#getProviders
+     */
+    const PROVIDERS = "providers";
+
+    /**
+     * Отправка SMS по шаблону
+     * https://demo-1.leadvertex.ru/admin/page/api.html#sendTemplate
+     */
+    const SEND_TEMPLATE = "sendTemplate";
+
+    /**
+     * Отправка произвольного текста
+     * https://demo-1.leadvertex.ru/admin/page/api.html#sendText
+     */
+    const SEND_TEXT = "sendText";
+
+    /**
+     * Просмотр статуса отправленных SMS
+     * https://demo-1.leadvertex.ru/admin/page/api.html#statusSms
+     */
+    const STATUS = "status";
+
+    /**
+     * Создание шаблона SMS
+     * https://demo-1.leadvertex.ru/admin/page/api.html#createTemplate
+     */
+    const CREATE_TEMPLATE = "createTemplate";
+
+    /**
+     * Удалить шаблон SMS
+     * https://demo-1.leadvertex.ru/admin/page/api.html#deleteTemplate
+     */
+    const DELETE_TEMPLATE = "deleteTemplate";
 
     /** @var string */
     protected $method;
