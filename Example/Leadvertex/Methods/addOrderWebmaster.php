@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__ . '/api-manager-leadvertex-plugin/src/bootstrap.php';
 
-use ApiAnswer\Application\ApiAnswer;
-use ApiManager\Application\Classes\DataGuard;
-use ApiManager\Plugins\Leadvertex\WebmasterApi;
-use ApiManager\Application\Classes\DataHelper;
-use ApiManager\Plugins\Leadvertex\Entity\Good;
-use ApiManager\Plugins\Leadvertex\Fields;
 use GuzzleHttp\Exception\GuzzleException;
+use lShamanl\ApiAnswer\ApiAnswer;
+use lShamanl\ApiManager\Classes\DataGuard;
+use lShamanl\ApiManager\Classes\DataHelper;
+use lShamanl\ApiManagerPlugins\Leadvertex\Entity\Good;
+use lShamanl\ApiManagerPlugins\Leadvertex\Fields;
+use lShamanl\ApiManagerPlugins\Leadvertex\WebmasterApi;
 
 try {
     DataGuard::required([

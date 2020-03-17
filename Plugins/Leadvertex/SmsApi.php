@@ -1,16 +1,16 @@
 <?php
 
 
-namespace ApiManager\Plugins\Leadvertex;
+namespace lShamanl\ApiManagerPlugins\Leadvertex;
 
 
-use ApiManager\Application\ApiManager;
-use ApiManager\Application\Exceptions\ApiException;
-use ApiManager\Application\PluginApi;
+use lShamanl\ApiManager\ApiManager;
+use lShamanl\ApiManager\Exceptions\ApiException;
+use lShamanl\ApiManager\PluginApi;
 
 /**
  * Class SmsApi
- * @package ApiManager\Plugins\Leadvertex
+ * @package lShamanl\ApiManagerPlugins\Leadvertex
  * Документация: https://demo-1.leadvertex.ru/admin/page/api.html
  */
 class SmsApi extends PluginApi

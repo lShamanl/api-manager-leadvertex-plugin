@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ApiManager\Plugins\Leadvertex;
+namespace lShamanl\ApiManagerPlugins\Leadvertex;
 
 
 class Fields

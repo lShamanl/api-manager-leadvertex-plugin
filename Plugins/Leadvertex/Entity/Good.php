@@ -1,7 +1,7 @@
 <?php
 
 
-namespace ApiManager\Plugins\Leadvertex\Entity;
+namespace lShamanl\ApiManagerPlugins\Leadvertex\Entity;
 
 
 class Good
