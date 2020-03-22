@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b0f2697e568a4558aa1346c241c3711",
+    "content-hash": "518f86d65d4c9326ed46abd6c9a80f13",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -197,20 +197,23 @@
         },
         {
             "name": "lshamanl/api-answer",
-            "version": "1.1.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lShamanl/api-answer.git",
-                "reference": "03ba3572b643d4474c59b1da2d1470cd2a204046"
+                "reference": "45b3ee547c1e80d391c0921c76dcfa091870d837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lShamanl/api-answer/zipball/03ba3572b643d4474c59b1da2d1470cd2a204046",
-                "reference": "03ba3572b643d4474c59b1da2d1470cd2a204046",
+                "url": "https://api.github.com/repos/lShamanl/api-answer/zipball/45b3ee547c1e80d391c0921c76dcfa091870d837",
+                "reference": "45b3ee547c1e80d391c0921c76dcfa091870d837",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5"
             },
             "type": "library",
             "autoload": {
@@ -229,27 +232,28 @@
                 }
             ],
             "description": "Универсальный формат для создания ответов от API",
-            "time": "2020-03-17T15:47:31+00:00"
+            "time": "2020-03-22T12:43:14+00:00"
         },
         {
             "name": "lshamanl/api-manager",
-            "version": "1.5.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lShamanl/api-manager.git",
-                "reference": "3acb3ec464052c54ea998d0b8ac1ed3a5774088c"
+                "reference": "acaad2be88bb63481fdf00475fce48eff262fa39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lShamanl/api-manager/zipball/3acb3ec464052c54ea998d0b8ac1ed3a5774088c",
-                "reference": "3acb3ec464052c54ea998d0b8ac1ed3a5774088c",
+                "url": "https://api.github.com/repos/lShamanl/api-manager/zipball/acaad2be88bb63481fdf00475fce48eff262fa39",
+                "reference": "acaad2be88bb63481fdf00475fce48eff262fa39",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "~6.0",
-                "lshamanl/api-answer": "^1.1"
+                "lshamanl/api-answer": "^1.3",
+                "php": ">=5.5"
             },
             "type": "library",
             "autoload": {
@@ -267,8 +271,8 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Разработка для удобного обращения с API различных сервисов. Работает на версии php 5.5+",
-            "time": "2020-03-17T15:52:52+00:00"
+            "description": "Разработка для удобного обращения с API различных сервисов.",
+            "time": "2020-03-22T12:54:22+00:00"
         },
         {
             "name": "psr/http-message",

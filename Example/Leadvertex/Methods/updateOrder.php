@@ -3,6 +3,7 @@ require_once __DIR__ . '/api-manager-leadvertex-plugin/src/bootstrap.php';
 
 use GuzzleHttp\Exception\GuzzleException;
 use lShamanl\ApiAnswer\ApiAnswer;
+use lShamanl\ApiAnswer\StatusCode;
 use lShamanl\ApiManager\Classes\DataGuard;
 use lShamanl\ApiManagerPlugins\Leadvertex\AdminApi;
 use lShamanl\ApiManagerPlugins\Leadvertex\Entity\Good;
@@ -17,7 +18,8 @@ try {
     ]);
 
     if ($_POST['statusId'] != 1) {
-        ApiAnswer::responseRejected('С таким статусом скрипт не работает!', ApiAnswer::CODE_400_BAD_REQUEST, true);
+        echo new ApiAnswer(false, StatusCode::HTTP_BAD_REQUEST, 'С таким статусом скрипт не работает!');
+        http_response_code($e->getCode());
     }
 
     $lvAdminApi = new AdminApi('offerName','123',AdminApi::UPDATE_ORDER);
@@ -37,9 +39,12 @@ try {
         ])
         ->sendPostForm();
 
-    echo ApiAnswer::responseOk('Принято',ApiAnswer::CODE_202_ACCEPTED, true); exit;
+    echo new ApiAnswer(true, StatusCode::HTTP_OK,'Принято');
+    http_response_code(StatusCode::HTTP_OK);
 } catch (Exception $e) {
-    echo ApiAnswer::responseError($e,true); exit;
+    echo new ApiAnswer(false, $e->getCode(), $e->getMessage());
+    http_response_code($e->getCode());
 } catch (GuzzleException $e) {
-    echo ApiAnswer::responseError($e,true); exit;
+    echo new ApiAnswer(false, $e->getCode(), $e->getMessage());
+    http_response_code($e->getCode());
 }

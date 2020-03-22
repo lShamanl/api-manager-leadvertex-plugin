@@ -3,6 +3,7 @@ require_once __DIR__ . '/api-manager-leadvertex-plugin/src/bootstrap.php';
 
 use GuzzleHttp\Exception\GuzzleException;
 use lShamanl\ApiAnswer\ApiAnswer;
+use lShamanl\ApiAnswer\StatusCode;
 use lShamanl\ApiManager\Classes\DataGuard;
 use lShamanl\ApiManager\Classes\DataHelper;
 use lShamanl\ApiManagerPlugins\Leadvertex\Entity\Good;
@@ -37,9 +38,12 @@ try {
 
     header('location: /');
 
-    echo ApiAnswer::responseOk('Принято',ApiAnswer::CODE_202_ACCEPTED, true); exit;
+    echo new ApiAnswer(true, StatusCode::HTTP_OK,'Принято');
+    http_response_code(StatusCode::HTTP_OK);
 } catch (Exception $e) {
-    echo ApiAnswer::responseError($e,true); exit;
+    echo new ApiAnswer(false, $e->getCode(), $e->getMessage());
+    http_response_code($e->getCode());
 } catch (GuzzleException $e) {
-    echo ApiAnswer::responseError($e,true); exit;
+    echo new ApiAnswer(false, $e->getCode(), $e->getMessage());
+    http_response_code($e->getCode());
 }

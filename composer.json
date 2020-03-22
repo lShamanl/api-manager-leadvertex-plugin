@@ -11,7 +11,7 @@
     "description": "Плагин для удобной работы с API Leadvertex",
     "require": {
         "ext-curl": "*",
-        "lshamanl/api-manager": "^1.5.1"
+        "lshamanl/api-manager": "^1.7"
     },
     "autoload": {
         "psr-4": {

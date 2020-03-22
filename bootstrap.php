@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
 
-use ApiAnswer\Application\ApiAnswer;
+use lShamanl\ApiAnswer\ApiAnswer;
+
+require_once __DIR__ . '/vendor/autoload.php';
 
 try {
     header('Content-Type: text/html; charset=utf-8');
@@ -19,5 +20,6 @@ try {
         }
     }
 } catch (Exception $e) {
-    ApiAnswer::responseError($e);
+    echo new ApiAnswer(false, $e->getCode(), $e->getMessage());
+    http_response_code($e->getCode());
 }
